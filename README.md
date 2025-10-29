@@ -1,3 +1,2 @@
 # Bob
-
-Bob is a Discord Bot, work is progess.
+Just some sorting algos visiulized.
