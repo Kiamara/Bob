@@ -1,16 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Sorting Visualizer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.O.B</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Sorting Visualizer</h1>
-    <div id="bars">
+    <main class="shell">
+      <header class="topbar">
+        <div class="brand">
+          <div>
+        </div>
+        <div class="status-group">
+          <div class="stat">
+            <p class="label">Status</p>
+            <p id="status" class="value">Idle</p>
+          </div>
+          <div class="stat">
+            <p class="label">Comparisons</p>
+            <p id="comparisons" class="value">0</p>
+          </div>
+          <div class="stat">
+            <p class="label">Swaps</p>
+            <p id="swaps" class="value">0</p>
+          </div>
+        </div>
+      </header>
 
-      
-    </div>
+      <section class="hero">
+        <div class="hero-text">
+          <h1>bob</h1>
+          <div class="cta-row">
+            <button id="start" class="btn primary">Run</button>
+            <button id="shuffle" class="btn">Shuffle</button>
+          </div>
+        </div>
+      </section>
 
+      <section class="lab">
+        <aside class="panel controls">
+          <div class="field">
+            <label for="algo">Algorithm</label>
+            <select id="algo">
+              <option value="bubble">Bubble Sort</option>
+              <option value="selection">Selection Sort</option>
+              <option value="insertion">Insertion Sort</option>
+              <option value="merge">Merge Sort</option>
+            </select>
+          </div>
+          <div class="field range">
+            <label for="size">Size <span id="sizeLabel" class="chip">32</span></label>
+            <input id="size" type="range" min="8" max="80" value="32">
+          </div>
+          <div class="field range">
+            <label for="speed">Delay <span id="speedLabel" class="chip">90 ms</span></label>
+            <input id="speed" type="range" min="10" max="220" value="90">
+          </div>
+        </aside>
+
+        <div class="panel stage">
+          <div class="stage-head">
+            <p class="label">Visualizer</p>
+            <div class="legend">
+              <span><span class="dot active"></span>Active</span>
+              <span><span class="dot done"></span>Sorted</span>
+            </div>
+          </div>
+          <div class="bars-frame">
+            <div id="bars" class="bars"></div>
+          </div>
+        </div>
+      </section>
+    </main>
     <script src="sorts.js"></script>
   </body>
 </html>
