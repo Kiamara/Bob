@@ -184,6 +184,10 @@ h1 {
   gap: 8px;
 }
 
+.sizeNumber{
+  float: right;
+}
+
 .chip {
   padding: 4px 8px;
   border-radius: 8px;
@@ -192,6 +196,27 @@ h1 {
   font-weight: 700;
   font-size: 12px;
 }
+
+.chip-input {
+  width: 40px;
+  text-align: center;
+  padding-inline: 0;      
+  border-radius: 8px;
+  background: var(--surface);
+  border: 1px solid var(--stroke);
+  color: var(--text);
+  font: inherit;
+}
+
+.chip-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.sizeNumber {
+  float: right;
+}
+
 
 label {
   color: var(--text);

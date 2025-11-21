@@ -12,7 +12,7 @@ export const state = {
   swaps: 0,
 };
 
-const sizeLabel = document.getElementById("sizeLabel");
+const sizeNumberInput = document.getElementById("sizeNumber");
 const speedLabel = document.getElementById("speedLabel");
 const statusEl = document.getElementById("status");
 const comparisonsEl = document.getElementById("comparisons");
@@ -27,8 +27,12 @@ const randomValue = () => Math.floor(Math.random() * 90) + 10;
 let bars = [];
 
 export const updateLabels = () => {
-  sizeLabel.textContent = sizeInput.value;
-  speedLabel.textContent = `${speedInput.value} ms`;
+  if (sizeNumberInput) {
+    sizeNumberInput.value = sizeInput.value;
+  }
+  if (speedLabel) {
+    speedLabel.textContent = `${speedInput.value} ms`;
+  }
 };
 
 export const setDisabled = (state) => {
@@ -87,3 +91,17 @@ export const createArray = () => {
   setStatus("Ready");
   buildBars();
 };
+
+if (sizeNumberInput) {
+  sizeNumberInput.addEventListener("input", () => {
+    const min = Number(sizeInput.min);
+    const max = Number(sizeInput.max);
+    const numericValue = Number(sizeNumberInput.value);
+    const clampedValue = Number.isFinite(numericValue)
+      ? Math.min(Math.max(numericValue, min), max)
+      : min;
+    sizeInput.value = clampedValue;
+    sizeNumberInput.value = clampedValue;
+    sizeInput.dispatchEvent(new Event("input", { bubbles: true }));
+  });
+}
