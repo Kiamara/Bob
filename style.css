@@ -7,8 +7,8 @@
   --panel: #0b0b0b;
   --surface: #0f0f0f;
   --stroke: #1a1a1a;
-  --accent: #36c0ff;
-  --accent-2: #ffd166;
+  --accent: #33da1d;
+  --accent-2: #c91515;
   --text: #f4f4f4;
   --muted: #8a8a8a;
   --mono: "DM Mono", monospace;
@@ -72,8 +72,7 @@ body {
 }
 
 .status-group {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  display: flex;
   gap: 10px;
 }
 
@@ -298,7 +297,7 @@ input[type="range"]::-moz-range-thumb {
 
 .bar {
   width: 100%;
-  background: linear-gradient(180deg, #36c0ff, #0d6fa2);
+  background: linear-gradient(180deg, #f54d4d, #ca3b3b );
   border-radius: 4px 4px 2px 2px;
   transition: height 90ms ease, transform 90ms ease, opacity 120ms ease, background 120ms ease;
   opacity: 0.9;
