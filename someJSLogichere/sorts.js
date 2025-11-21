@@ -20,6 +20,7 @@ export const startSort = async () => {
   if (algo === "selection") await selectionSort();
   if (algo === "insertion") await insertionSort();
   if (algo === "merge") await mergeSort();
+  if (algo === "random") await randomSort();
   paint([], state.values.map((_, idx) => idx));
   setStatus("Done");
   state.running = false;
@@ -149,4 +150,35 @@ const mergeSort = async () => {
   };
 
   await split(0, state.values.length - 1);
+};
+
+const isSorted = () => {
+  for (let i = 1; i < state.values.length; i++) {
+    state.comparisons++;
+    if (state.values[i - 1] > state.values[i]) return false;
+  }
+  return true;
+};
+
+const randomSort = async () => {
+  while (true) {
+    if (isSorted()) {
+      paint([], state.values.map((_, idx) => idx));
+      updateStats();
+      break;
+    }
+    for (let i = state.values.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      if (i !== j) {
+        [state.values[i], state.values[j]] = [
+          state.values[j],
+          state.values[i],
+        ];
+        state.swaps++;
+      }
+    }
+    paint([], []);
+    updateStats();
+    await pause();
+  }
 };

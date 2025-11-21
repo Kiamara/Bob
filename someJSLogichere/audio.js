@@ -1,9 +1,8 @@
-let audioCtx;
-
-let lastToneTime = 0;
-
 const minToneHz = 180;
 const maxToneHz = 1100;
+
+let audioCtx;
+let lastToneTime = 0;
 
 const initAudio = () => {
   if (audioCtx) return;

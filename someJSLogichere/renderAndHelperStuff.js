@@ -2,12 +2,6 @@ import { playTone } from "./audio.js";
 
 export const sizeInput = document.getElementById("size");
 export const speedInput = document.getElementById("speed");
-const sizeLabel = document.getElementById("sizeLabel");
-const speedLabel = document.getElementById("speedLabel");
-const statusEl = document.getElementById("status");
-const comparisonsEl = document.getElementById("comparisons");
-const swapsEl = document.getElementById("swaps");
-const barsEl = document.getElementById("bars");
 export const shuffleBtn = document.getElementById("shuffle");
 export const startBtn = document.getElementById("start");
 export const algoSelect = document.getElementById("algo");
@@ -17,6 +11,13 @@ export const state = {
   comparisons: 0,
   swaps: 0,
 };
+
+const sizeLabel = document.getElementById("sizeLabel");
+const speedLabel = document.getElementById("speedLabel");
+const statusEl = document.getElementById("status");
+const comparisonsEl = document.getElementById("comparisons");
+const swapsEl = document.getElementById("swaps");
+const barsEl = document.getElementById("bars");
 
 export const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 export const pause = () => wait(speedInput.value);
