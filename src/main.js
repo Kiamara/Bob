@@ -6,7 +6,7 @@ import {
   startBtn,
   state,
   updateLabels,
-} from "./someJSLogichere/renderAndHelperSutff.js";
+} from "./someJSLogichere/renderAndHelperStuff.js";
 import { primeAudio } from "./someJSLogichere/audio.js";
 import { startSort } from "./someJSLogichere/sorts.js";
 

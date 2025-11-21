@@ -7,7 +7,7 @@ import {
   setStatus,
   state,
   updateStats,
-} from "./renderAndHelperSutff.js";
+} from "./renderAndHelperStuff.js";
 
 export const startSort = async () => {
   if (state.running) return;
