@@ -47,29 +47,6 @@ body {
   gap: 12px;
 }
 
-.mark {
-  width: 42px;
-  height: 42px;
-  border-radius: 10px;
-  background: var(--surface);
-  border: 1px solid var(--stroke);
-  display: grid;
-  place-items: center;
-  font-weight: 700;
-  color: var(--accent);
-  letter-spacing: 0.06em;
-}
-
-.brand-title {
-  margin: 0;
-  font-weight: 700;
-}
-
-.brand-sub {
-  margin: 2px 0 0;
-  font-size: 13px;
-  color: var(--muted);
-}
 
 .status-group {
   display: flex;
@@ -112,11 +89,6 @@ h1 {
   margin: 0;
   font-size: clamp(32px, 5vw, 48px);
   letter-spacing: -0.02em;
-}
-
-.lead {
-  margin: 0;
-  color: var(--muted);
 }
 
 .cta-row {
@@ -191,6 +163,22 @@ h1 {
   border: 1px solid var(--stroke);
   font-weight: 700;
   font-size: 12px;
+}
+
+.chip-input {
+  width: 40px;
+  text-align: center;
+  padding-inline: 0;      
+  border-radius: 8px;
+  background: var(--surface);
+  border: 1px solid var(--stroke);
+  color: var(--text);
+  font: inherit;
+}
+
+.chip-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 label {
